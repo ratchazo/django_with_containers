@@ -1,7 +1,11 @@
 {% if greeting_list %}
     <ul>
     {% for greeting in greeting_list %}
-        <li>{{ greeting.message }}</li>
+        <li>
+          {{ greeting.message }}
+          <span><a href="{% url 'greetings:update' greeting.id %}">edit</a></span>
+          <span><a href="{% url 'greetings:delete' greeting.id %}">delete</a></span>
+        </li>
     {% endfor %}
     </ul>
 {% else %}
