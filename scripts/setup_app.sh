@@ -5,3 +5,4 @@
 SRC_DIR=$(cd "$(dirname "$0")"; pwd -P)
 
 $SRC_DIR/setup_app/migrate_database.sh
+$SRC_DIR/setup_app/add_admin.sh
