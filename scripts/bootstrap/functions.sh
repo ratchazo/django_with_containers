@@ -10,6 +10,7 @@ teardown_containers() {
 
   case $environment in
     'development')
+      rm -rf db.sqlite3 # clear away data by blowing away the database
       docker-compose down -v
     ;;
   esac
